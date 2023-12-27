@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context=".TaskDetailActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="Task"
+        android:hint="Add a task name"
+        style="@style/Title3" />
+    
+    <EditText
+        android:id="@+id/edt_task_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add a name for your task"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Title3"
+        android:text="Description"
+        android:hint="Add a task description"
+        />
+
+    <EditText
+        android:id="@+id/edt_task_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add a description for your task"
+        />
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        style="@style/ButtonPrimary"
+        android:layout_marginTop="16dp"/>
+
+
+
+
+</LinearLayout>
