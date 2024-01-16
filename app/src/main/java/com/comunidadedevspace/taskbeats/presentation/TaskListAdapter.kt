@@ -1,7 +1,5 @@
-package com.comunidadedevspace.taskbeats
+package com.comunidadedevspace.taskbeats.presentation
 
-import android.os.Parcel
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +7,8 @@ import androidx.recyclerview.widget.ListAdapter
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.comunidadedevspace.taskbeats.R
+import com.comunidadedevspace.taskbeats.data.Task
 
 class TaskListAdapter(
 
@@ -53,7 +53,7 @@ class TaskListViewHolder(
     private val tvTitle = view.findViewById<TextView>(R.id.tv_task_title)
     private val tvDesc = view.findViewById<TextView>(R.id.tv_task_description)
 
-    fun bind(task:Task, openTaskDetailView: (task: Task) -> Unit){
+    fun bind(task: Task, openTaskDetailView: (task: Task) -> Unit){
     tvTitle.text = task.title
     tvDesc.text = task.description
 

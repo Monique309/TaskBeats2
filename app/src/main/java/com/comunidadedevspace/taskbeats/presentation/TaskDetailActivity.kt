@@ -1,18 +1,18 @@
-package com.comunidadedevspace.taskbeats
+package com.comunidadedevspace.taskbeats.presentation
 
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
+import com.comunidadedevspace.taskbeats.R
+import com.comunidadedevspace.taskbeats.data.Task
 import com.google.android.material.snackbar.Snackbar
 
 class TaskDetailActivity : AppCompatActivity() {
@@ -58,10 +58,10 @@ class TaskDetailActivity : AppCompatActivity() {
             if (title.isNotEmpty() && desc.isNotEmpty()) {
                 if (task == null) {
 
-                    addOrUpdate(0, title, desc, ActionType.CREATE)
+                    addOrUpdate(0, title, desc,ActionType.CREATE)
 
             } else {
-                    addOrUpdate(task!!.id, title, desc, ActionType.UPDATE)
+                    addOrUpdate(task!!.id, title, desc,ActionType.UPDATE)
 
             }
             }else{
@@ -70,9 +70,9 @@ class TaskDetailActivity : AppCompatActivity() {
 
         }
     }
-    private fun addOrUpdate (id: Int, title: String, description: String, actionType: ActionType){
+    private fun addOrUpdate (id: Int, title: String, description: String, actionType:ActionType){
         val task = Task(id, title, description)
-        returnAction(task, ActionType.CREATE)
+        returnAction(task,ActionType.CREATE)
 
     }
 
@@ -87,7 +87,7 @@ class TaskDetailActivity : AppCompatActivity() {
 
             R.id.delete_task -> {
                 if (task != null) {
-                    returnAction(task!!, ActionType.DELETE)
+                    returnAction(task!!,ActionType.DELETE)
                 } else {
                     showMessage(btnDone, "Item not found")
 
@@ -101,7 +101,7 @@ class TaskDetailActivity : AppCompatActivity() {
 
 
         }
-    private fun returnAction(task: Task, actionType: ActionType) {
+    private fun returnAction(task: Task, actionType:ActionType) {
 
         val intent = Intent()
             .apply {
