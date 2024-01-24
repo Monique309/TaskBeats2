@@ -53,6 +53,11 @@ dependencies {
             def lifecycle_version = "2.5.1"
             def arch_version = "2.1.0"
 
+            def fragment_version = "1.5.6"
+
+
+            implementation "androidx.fragment:fragment-ktx:$fragment_version"
+
             // ViewModel
             implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
             // ViewModel utilities for Compose
