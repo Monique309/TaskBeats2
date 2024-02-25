@@ -42,9 +42,7 @@ class TaskListAdapter(
         }
     }
 
-        fun newArray(size: Int): Array<TaskListAdapter?> {
-            return arrayOfNulls(size)
-        }
+
     }
 
 class TaskListViewHolder(

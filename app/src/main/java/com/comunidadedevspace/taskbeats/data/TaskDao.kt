@@ -26,4 +26,5 @@ interface taskDao {
     @Query("Delete from task WHERE id =:id")
     fun deleteById(id: Int)
 
+
 }
